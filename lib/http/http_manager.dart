@@ -32,7 +32,7 @@ class HttpManager {
         (client) {
 //      client.findProxy = (Uri) {
 //        // 设置了代理需要将这段代码打开才能抓到接口
-//        return 'PROXY 192.168.15.91:8888';
+//        return 'PROXY 192.168.14.11:8888';
 //      };
       client.badCertificateCallback =
           (X509Certificate cert, String host, int port) {

@@ -51,7 +51,7 @@ class IndexState extends State<IndexPage> {
                 return SmartRefresher(
                   enableTwoLevel: false,
                   controller: homeModel.refreshController,
-                  header:RefreshHeader(),
+                  header: RefreshHeader(),
                   footer: RefreshFooter(),
 //                  header: ClassicHeader(
 //                    idleText: "下拉可刷新",
@@ -135,7 +135,7 @@ class HomeTopArticleList extends StatelessWidget {
     return SliverList(
         delegate: SliverChildBuilderDelegate((context, index) {
       ArticleTopBeanData item = homeModel.article[index];
-      return ArticleItemWidget(item, true);
+      return ArticleItemWidget(item, true, index);
     }, childCount: homeModel.article == null ? 0 : homeModel.article.length));
   }
 }
@@ -148,7 +148,7 @@ class HomeArticleList extends StatelessWidget {
     return SliverList(
         delegate: SliverChildBuilderDelegate((context, index) {
       ArticleTopBeanData item = homeModel.list[index];
-      return ArticleItemWidget(item, false);
+      return ArticleItemWidget(item, false, index);
     }, childCount: homeModel.list == null ? 0 : homeModel.list.length));
   }
 }
