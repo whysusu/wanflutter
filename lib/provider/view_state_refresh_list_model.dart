@@ -51,7 +51,7 @@ abstract class ViewStateRefreshListModel<T> extends ViewStateListModel {
           msg: "刷新失败了",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
-          timeInSecForIos: 1,
+        timeInSecForIosWeb: 1,
 //          backgroundColor: Colors.blue[10],
 //          textcolor: '#ffffff'
       );
@@ -84,7 +84,7 @@ abstract class ViewStateRefreshListModel<T> extends ViewStateListModel {
         msg: "刷新失败了",
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
-        timeInSecForIos: 1,
+        timeInSecForIosWeb: 1,
 //          backgroundColor: Colors.blue[10],
 //          textcolor: '#ffffff'
       );

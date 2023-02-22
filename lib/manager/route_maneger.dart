@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:wanflutter/entity/article_bean_entity.dart';
 import 'package:wanflutter/entity/article_top_bean_entity.dart';
 import 'package:wanflutter/entity/project_list_entity.dart';
 import 'package:wanflutter/ui/page/SplashPage.dart';
@@ -16,7 +15,7 @@ class RouteName {
   static const String projectDetail = "projectDetail";
 }
 
-class Router {
+class Router1 {
   static Route<dynamic> generateRouter(RouteSettings settings) {
     switch (settings.name) {
       case RouteName.splash:

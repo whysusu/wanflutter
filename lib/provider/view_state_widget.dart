@@ -32,9 +32,9 @@ class ViewStateWidget extends StatelessWidget {
               child: Text(
                 message ?? "加载失败",
                 style: Theme.of(context)
-                    .textTheme
-                    .body1
-                    .copyWith(color: Colors.grey[700]),
+                    .textTheme.bodyLarge.copyWith(color: Colors.grey[700]),
+                    // .body1
+                    // .copyWith(color: Colors.grey[700]),
               )),
         ],
       ),

@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dio/adapter.dart';
+// import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
+import 'package:dio/io.dart';
 import 'package:wanflutter/http/api.dart';
 
 ///网络请求封装
@@ -26,7 +27,7 @@ class HttpManager {
 
   HttpManager.init() {
     options = BaseOptions(
-        baseUrl: HttpUrls.baseUrl, connectTimeout: 10000, receiveTimeout: 5000);
+        baseUrl: HttpUrls.baseUrl, connectTimeout: Duration(seconds: 30), receiveTimeout: Duration(seconds: 5));
     dio = new Dio(options);
     (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
         (client) {

@@ -46,10 +46,10 @@ class _ProviderWidgetState<A extends ChangeNotifier, B extends ChangeNotifier>
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<A>(
-          builder: (context) => modelA,
+          create: (context) => modelA,
         ),
         ChangeNotifierProvider<B>(
-          builder: (context) => modelB,
+          create: (context) => modelB,
         )
       ],
       child: Consumer2<A, B>(
@@ -98,7 +98,7 @@ class _ProviderWidgetOneState<T extends ChangeNotifier>
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<T>(
-          builder: (context) => model,
+          create: (context) => model,
         ),
       ],
       child: Consumer<T>(

@@ -7,15 +7,21 @@
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
     <application
-        android:name="io.flutter.app.FlutterApplication"
-        android:label="wanflutter"
-        android:icon="@mipmap/ic_launcher">
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+
+        android:label="wanflutter" >
+<!--        android:exported="true"-->
+<!--        android:name="io.flutter.app.FlutterApplication"-->
+<!--        android:name="android.app.Application"-->
+        <!--          android:name="io.flutter.app.FlutterApplication"-->
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
             android:windowSoftInputMode="adjustResize">
             <!-- This keeps the window background of the activity showing
                  until Flutter renders its first frame. It can be removed if
@@ -24,10 +30,35 @@
             <meta-data
                 android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
                 android:value="true" />
+<!--            -->
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--        <activity android:name=".MainActivity"-->
+<!--            android:theme="@style/LaunchTheme"-->
+<!--        >-->
+<!--        &lt;!&ndash; Specify that the launch screen should continue being displayed &ndash;&gt;-->
+<!--        &lt;!&ndash; until Flutter renders its first frame. &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="io.flutter.embedding.android.SplashScreenDrawable"-->
+<!--            android:resource="@drawable/launch_background" />-->
+
+<!--        &lt;!&ndash; Theme to apply as soon as Flutter begins rendering frames &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="io.flutter.embedding.android.NormalTheme"-->
+<!--            android:resource="@style/NormalTheme"-->
+<!--            />-->
+
+<!--        &lt;!&ndash; some code omitted &ndash;&gt;-->
+<!--    </activity>-->
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
     </application>
 </manifest>

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:wanflutter/http/http_manager.dart';
 
 import 'manager/route_maneger.dart';
 
@@ -26,7 +23,7 @@ class MyApp extends StatelessWidget {
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
       initialRoute: RouteName.splash,
       //初始路由
-      onGenerateRoute: Router.generateRouter,
+      onGenerateRoute: Router1.generateRouter,
       //生成路由
       debugShowCheckedModeBanner: false, //是否显示右上角的debug标签
     );
